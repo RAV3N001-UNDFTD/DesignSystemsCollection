@@ -1,0 +1,37 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+[data-theme="dark"] {
+  --ds-color-bg-canvas: var(--ds-color-gray-950); /** 页面最底层背景 */
+  --ds-color-bg-surface: var(--ds-color-gray-900); /** 卡片、面板等一级容器背景 */
+  --ds-color-bg-raised: var(--ds-color-gray-800); /** 浮层：下拉、popover、模态 */
+  --ds-color-bg-sunken: var(--ds-color-black); /** 内嵌区域：代码块底、输入框组、well */
+  --ds-color-fg-default: var(--ds-color-gray-50); /** 正文与标题文字 */
+  --ds-color-fg-muted: var(--ds-color-gray-400); /** 次要文字：描述、时间戳 */
+  --ds-color-fg-subtle: var(--ds-color-gray-500); /** 三级文字：占位符、禁用。不用于关键信息 */
+  --ds-color-fg-on-accent: var(--ds-color-white); /** accent 底色上的文字 */
+  --ds-color-border-default: var(--ds-color-gray-700); /** 默认描边与分隔线 */
+  --ds-color-border-muted: var(--ds-color-gray-800); /** 弱分隔：同层内部划分 */
+  --ds-color-border-strong: var(--ds-color-gray-500); /** 强调描边：输入框 hover、可拖拽边界 */
+  --ds-color-accent-default: var(--ds-color-blue-500); /** 品牌主强调色：主按钮、链接、选中态。大面积铺底改用 accent.muted */
+  --ds-color-accent-hover: var(--ds-color-blue-400); /** accent.default 的 hover 态 */
+  --ds-color-accent-active: var(--ds-color-blue-300); /** accent.default 的 active 态 */
+  --ds-color-accent-emphasis: var(--ds-color-blue-400); /** 浅底上的 accent 文字（对比度更高） */
+  --ds-color-accent-muted: var(--ds-color-blue-950); /** accent 的柔和底色：选中行、高亮块 */
+  --ds-color-status-success-bg: var(--ds-color-green-950);
+  --ds-color-status-success-fg: var(--ds-color-green-400);
+  --ds-color-status-success-border: var(--ds-color-green-900);
+  --ds-color-status-warning-bg: var(--ds-color-amber-950);
+  --ds-color-status-warning-fg: var(--ds-color-amber-400);
+  --ds-color-status-warning-border: var(--ds-color-amber-900);
+  --ds-color-status-danger-bg: var(--ds-color-red-950);
+  --ds-color-status-danger-fg: var(--ds-color-red-400);
+  --ds-color-status-danger-border: var(--ds-color-red-900);
+  --ds-color-status-info-bg: var(--ds-color-blue-950);
+  --ds-color-status-info-fg: var(--ds-color-blue-400);
+  --ds-color-status-info-border: var(--ds-color-blue-900);
+  --ds-color-ai-accent: var(--ds-color-violet-400); /** AI 身份色：AI 按钮、AI 图标。仅用于标识 AI 能力，不作普通装饰 */
+  --ds-color-ai-surface: var(--ds-color-violet-950); /** AI 生成内容的底色：assistant 气泡、reasoning 面板 */
+  --ds-color-ai-fg: var(--ds-color-violet-300); /** AI 相关文字与图标 */
+}

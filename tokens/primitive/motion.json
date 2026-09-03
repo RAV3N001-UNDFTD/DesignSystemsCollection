@@ -1,0 +1,17 @@
+{
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "fast": { "$value": "150ms", "$description": "微交互：hover、focus ring" },
+      "base": { "$value": "250ms", "$description": "默认：展开、淡入" },
+      "slow": { "$value": "400ms", "$description": "大面积位移：抽屉、模态" },
+      "slower": { "$value": "700ms", "$description": "仅用于页面级转场" }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": "cubic-bezier(0.2, 0, 0, 1)", "$description": "默认双向缓动" },
+      "enter": { "$value": "cubic-bezier(0, 0, 0.2, 1)", "$description": "入场（减速）" },
+      "exit": { "$value": "cubic-bezier(0.4, 0, 1, 1)", "$description": "出场（加速）" }
+    }
+  }
+}

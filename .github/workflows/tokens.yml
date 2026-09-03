@@ -1,0 +1,22 @@
+name: tokens
+
+on:
+  push:
+    paths: ['tokens/**', 'scripts/**', 'dist/**', 'package*.json', '.github/workflows/tokens.yml']
+  pull_request:
+    paths: ['tokens/**', 'scripts/**', 'dist/**', 'package*.json', '.github/workflows/tokens.yml']
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run tokens:validate
+      - run: npm run tokens:build
+      - name: Ensure committed dist is in sync with sources
+        run: git diff --exit-code dist

@@ -1,0 +1,42 @@
+{
+  "font": {
+    "heading": {
+      "1": {
+        "size": { "$type": "dimension", "$value": "{font.size.800}" },
+        "weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },
+        "line-height": { "$type": "number", "$value": "{font.line-height.100}" }
+      },
+      "2": {
+        "size": { "$type": "dimension", "$value": "{font.size.700}" },
+        "weight": { "$type": "fontWeight", "$value": "{font.weight.semibold}" },
+        "line-height": { "$type": "number", "$value": "{font.line-height.100}" }
+      },
+      "3": {
+        "size": { "$type": "dimension", "$value": "{font.size.600}" },
+        "weight": { "$type": "fontWeight", "$value": "{font.weight.semibold}" },
+        "line-height": { "$type": "number", "$value": "{font.line-height.200}" }
+      },
+      "4": {
+        "size": { "$type": "dimension", "$value": "{font.size.500}" },
+        "weight": { "$type": "fontWeight", "$value": "{font.weight.medium}" },
+        "line-height": { "$type": "number", "$value": "{font.line-height.200}" }
+      }
+    },
+    "body": {
+      "default": {
+        "size": { "$type": "dimension", "$value": "{font.size.300}" },
+        "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },
+        "line-height": { "$type": "number", "$value": "{font.line-height.300}" }
+      },
+      "small": {
+        "size": { "$type": "dimension", "$value": "{font.size.200}" },
+        "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },
+        "line-height": { "$type": "number", "$value": "{font.line-height.300}" }
+      }
+    },
+    "code": {
+      "size": { "$type": "dimension", "$value": "{font.size.200}" },
+      "family": { "$type": "fontFamily", "$value": "{font.family.mono}" }
+    }
+  }
+}

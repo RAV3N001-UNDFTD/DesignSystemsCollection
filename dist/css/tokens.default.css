@@ -1,0 +1,176 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --ds-color-white: #ffffff;
+  --ds-color-black: #000000;
+  --ds-color-gray-50: #fafafa;
+  --ds-color-gray-100: #f4f4f5;
+  --ds-color-gray-200: #e4e4e7;
+  --ds-color-gray-300: #d4d4d8;
+  --ds-color-gray-400: #a1a1aa;
+  --ds-color-gray-500: #71717a;
+  --ds-color-gray-600: #52525b;
+  --ds-color-gray-700: #3f3f46;
+  --ds-color-gray-800: #27272a;
+  --ds-color-gray-900: #18181b;
+  --ds-color-gray-950: #09090b;
+  --ds-color-blue-50: #eff6ff;
+  --ds-color-blue-100: #dbeafe;
+  --ds-color-blue-200: #bfdbfe;
+  --ds-color-blue-300: #93c5fd;
+  --ds-color-blue-400: #60a5fa;
+  --ds-color-blue-500: #3b82f6;
+  --ds-color-blue-600: #2563eb;
+  --ds-color-blue-700: #1d4ed8;
+  --ds-color-blue-800: #1e40af;
+  --ds-color-blue-900: #1e3a8a;
+  --ds-color-blue-950: #172554;
+  --ds-color-red-50: #fef2f2;
+  --ds-color-red-100: #fee2e2;
+  --ds-color-red-200: #fecaca;
+  --ds-color-red-300: #fca5a5;
+  --ds-color-red-400: #f87171;
+  --ds-color-red-500: #ef4444;
+  --ds-color-red-600: #dc2626;
+  --ds-color-red-700: #b91c1c;
+  --ds-color-red-800: #991b1b;
+  --ds-color-red-900: #7f1d1d;
+  --ds-color-red-950: #450a0a;
+  --ds-color-green-50: #f0fdf4;
+  --ds-color-green-100: #dcfce7;
+  --ds-color-green-200: #bbf7d0;
+  --ds-color-green-300: #86efac;
+  --ds-color-green-400: #4ade80;
+  --ds-color-green-500: #22c55e;
+  --ds-color-green-600: #16a34a;
+  --ds-color-green-700: #15803d;
+  --ds-color-green-800: #166534;
+  --ds-color-green-900: #14532d;
+  --ds-color-green-950: #052e16;
+  --ds-color-amber-50: #fffbeb;
+  --ds-color-amber-100: #fef3c7;
+  --ds-color-amber-200: #fde68a;
+  --ds-color-amber-300: #fcd34d;
+  --ds-color-amber-400: #fbbf24;
+  --ds-color-amber-500: #f59e0b;
+  --ds-color-amber-600: #d97706;
+  --ds-color-amber-700: #b45309;
+  --ds-color-amber-800: #92400e;
+  --ds-color-amber-900: #78350f;
+  --ds-color-amber-950: #451a03;
+  --ds-color-violet-50: #f5f3ff;
+  --ds-color-violet-100: #ede9fe;
+  --ds-color-violet-200: #ddd6fe;
+  --ds-color-violet-300: #c4b5fd;
+  --ds-color-violet-400: #a78bfa;
+  --ds-color-violet-500: #8b5cf6;
+  --ds-color-violet-600: #7c3aed;
+  --ds-color-violet-700: #6d28d9;
+  --ds-color-violet-800: #5b21b6;
+  --ds-color-violet-900: #4c1d95;
+  --ds-color-violet-950: #2e1065;
+  --ds-dimension-space-1: 0.25rem; /** 4px */
+  --ds-dimension-space-2: 0.5rem; /** 8px */
+  --ds-dimension-space-3: 0.75rem; /** 12px */
+  --ds-dimension-space-4: 1rem; /** 16px */
+  --ds-dimension-space-5: 1.25rem; /** 20px */
+  --ds-dimension-space-6: 1.5rem; /** 24px */
+  --ds-dimension-space-8: 2rem; /** 32px */
+  --ds-dimension-space-10: 2.5rem; /** 40px */
+  --ds-dimension-space-12: 3rem; /** 48px */
+  --ds-dimension-space-16: 4rem; /** 64px */
+  --ds-dimension-radius-sm: 0.25rem; /** 4px — 小控件：checkbox、tag */
+  --ds-dimension-radius-md: 0.5rem; /** 8px — 默认：按钮、输入框 */
+  --ds-dimension-radius-lg: 0.75rem; /** 12px — 卡片 */
+  --ds-dimension-radius-xl: 1rem; /** 16px — 大容器、模态 */
+  --ds-dimension-radius-full: 9999px; /** 胶囊/圆形 */
+  --ds-dimension-border-width-1: 1px;
+  --ds-dimension-border-width-2: 2px;
+  --ds-shadow-elevation-1: 0 1px 2px 0 rgb(0 0 0 / 0.05); /** 贴面 — 输入框、静止卡片 */
+  --ds-shadow-elevation-2: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /** 浮起 — hover 卡片 */
+  --ds-shadow-elevation-3: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /** 下拉、popover */
+  --ds-shadow-elevation-4: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /** 模态 */
+  --ds-shadow-elevation-5: 0 25px 50px -12px rgb(0 0 0 / 0.25); /** 最高层 — command palette */
+  --ds-motion-duration-fast: 150ms; /** 微交互：hover、focus ring */
+  --ds-motion-duration-base: 250ms; /** 默认：展开、淡入 */
+  --ds-motion-duration-slow: 400ms; /** 大面积位移：抽屉、模态 */
+  --ds-motion-duration-slower: 700ms; /** 仅用于页面级转场 */
+  --ds-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1); /** 默认双向缓动 */
+  --ds-motion-easing-enter: cubic-bezier(0, 0, 0.2, 1); /** 入场（减速） */
+  --ds-motion-easing-exit: cubic-bezier(0.4, 0, 1, 1); /** 出场（加速） */
+  --ds-font-family-sans: Inter, system-ui, -apple-system, sans-serif;
+  --ds-font-family-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --ds-font-size-100: 0.75rem; /** 12px — 辅助标注、legal 文本 */
+  --ds-font-size-200: 0.875rem; /** 14px — 小号正文、表格、代码 */
+  --ds-font-size-300: 1rem; /** 16px — 默认正文 */
+  --ds-font-size-400: 1.125rem; /** 18px */
+  --ds-font-size-500: 1.25rem; /** 20px */
+  --ds-font-size-600: 1.5rem; /** 24px */
+  --ds-font-size-700: 1.875rem; /** 30px */
+  --ds-font-size-800: 2.25rem; /** 36px */
+  --ds-font-size-900: 3rem; /** 48px — display 级，仅 hero 使用 */
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+  --ds-font-line-height-100: 1.2; /** 紧凑 — 大标题 */
+  --ds-font-line-height-200: 1.375; /** 中等 — 小标题、UI 文本 */
+  --ds-font-line-height-300: 1.5; /** 默认 — 正文 */
+  --ds-font-line-height-400: 1.625; /** 宽松 — 长文阅读 */
+  --ds-color-bg-canvas: var(--ds-color-white); /** 页面最底层背景 */
+  --ds-color-bg-surface: var(--ds-color-gray-50); /** 卡片、面板等一级容器背景 */
+  --ds-color-bg-raised: var(--ds-color-white); /** 浮层：下拉、popover、模态 */
+  --ds-color-bg-sunken: var(--ds-color-gray-100); /** 内嵌区域：代码块底、输入框组、well */
+  --ds-color-fg-default: var(--ds-color-gray-900); /** 正文与标题文字 */
+  --ds-color-fg-muted: var(--ds-color-gray-600); /** 次要文字：描述、时间戳 */
+  --ds-color-fg-subtle: var(--ds-color-gray-400); /** 三级文字：占位符、禁用。不用于关键信息 */
+  --ds-color-fg-on-accent: var(--ds-color-white); /** accent 底色上的文字 */
+  --ds-color-border-default: var(--ds-color-gray-200); /** 默认描边与分隔线 */
+  --ds-color-border-muted: var(--ds-color-gray-100); /** 弱分隔：同层内部划分 */
+  --ds-color-border-strong: var(--ds-color-gray-400); /** 强调描边：输入框 hover、可拖拽边界 */
+  --ds-color-accent-default: var(--ds-color-blue-600); /** 品牌主强调色：主按钮、链接、选中态。大面积铺底改用 accent.muted */
+  --ds-color-accent-hover: var(--ds-color-blue-700); /** accent.default 的 hover 态 */
+  --ds-color-accent-active: var(--ds-color-blue-800); /** accent.default 的 active 态 */
+  --ds-color-accent-emphasis: var(--ds-color-blue-700); /** 浅底上的 accent 文字（对比度更高） */
+  --ds-color-accent-muted: var(--ds-color-blue-100); /** accent 的柔和底色：选中行、高亮块 */
+  --ds-color-status-success-bg: var(--ds-color-green-50);
+  --ds-color-status-success-fg: var(--ds-color-green-700);
+  --ds-color-status-success-border: var(--ds-color-green-200);
+  --ds-color-status-warning-bg: var(--ds-color-amber-50);
+  --ds-color-status-warning-fg: var(--ds-color-amber-700);
+  --ds-color-status-warning-border: var(--ds-color-amber-200);
+  --ds-color-status-danger-bg: var(--ds-color-red-50);
+  --ds-color-status-danger-fg: var(--ds-color-red-600);
+  --ds-color-status-danger-border: var(--ds-color-red-200);
+  --ds-color-status-info-bg: var(--ds-color-blue-50);
+  --ds-color-status-info-fg: var(--ds-color-blue-600);
+  --ds-color-status-info-border: var(--ds-color-blue-200);
+  --ds-color-ai-accent: var(--ds-color-violet-600); /** AI 身份色：AI 按钮、AI 图标。仅用于标识 AI 能力，不作普通装饰 */
+  --ds-color-ai-surface: var(--ds-color-violet-50); /** AI 生成内容的底色：assistant 气泡、reasoning 面板 */
+  --ds-color-ai-fg: var(--ds-color-violet-700); /** AI 相关文字与图标 */
+  --ds-dimension-space-inline: var(--ds-dimension-space-2); /** 行内元素间距：图标与文字、tag 之间 */
+  --ds-dimension-space-stack: var(--ds-dimension-space-4); /** 垂直堆叠节奏：表单项、卡片内段落之间 */
+  --ds-dimension-space-section: var(--ds-dimension-space-12); /** 页面区块之间 */
+  --ds-font-heading-1-size: var(--ds-font-size-800);
+  --ds-font-heading-1-weight: var(--ds-font-weight-bold);
+  --ds-font-heading-1-line-height: var(--ds-font-line-height-100);
+  --ds-font-heading-2-size: var(--ds-font-size-700);
+  --ds-font-heading-2-weight: var(--ds-font-weight-semibold);
+  --ds-font-heading-2-line-height: var(--ds-font-line-height-100);
+  --ds-font-heading-3-size: var(--ds-font-size-600);
+  --ds-font-heading-3-weight: var(--ds-font-weight-semibold);
+  --ds-font-heading-3-line-height: var(--ds-font-line-height-200);
+  --ds-font-heading-4-size: var(--ds-font-size-500);
+  --ds-font-heading-4-weight: var(--ds-font-weight-medium);
+  --ds-font-heading-4-line-height: var(--ds-font-line-height-200);
+  --ds-font-body-default-size: var(--ds-font-size-300);
+  --ds-font-body-default-weight: var(--ds-font-weight-regular);
+  --ds-font-body-default-line-height: var(--ds-font-line-height-300);
+  --ds-font-body-small-size: var(--ds-font-size-200);
+  --ds-font-body-small-weight: var(--ds-font-weight-regular);
+  --ds-font-body-small-line-height: var(--ds-font-line-height-300);
+  --ds-font-code-size: var(--ds-font-size-200);
+  --ds-font-code-family: var(--ds-font-family-mono);
+}

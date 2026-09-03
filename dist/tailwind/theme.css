@@ -1,0 +1,47 @@
+/* Generated — do not edit. Bridges --ds-* variables into Tailwind v4 utilities. */
+/* Import order: tokens.default.css, tokens.dark.css, then this file. */
+@theme inline {
+  --color-canvas: var(--ds-color-bg-canvas);
+  --color-surface: var(--ds-color-bg-surface);
+  --color-raised: var(--ds-color-bg-raised);
+  --color-sunken: var(--ds-color-bg-sunken);
+  --color-fg: var(--ds-color-fg-default);
+  --color-fg-muted: var(--ds-color-fg-muted);
+  --color-fg-subtle: var(--ds-color-fg-subtle);
+  --color-fg-on-accent: var(--ds-color-fg-on-accent);
+  --color-border: var(--ds-color-border-default);
+  --color-border-muted: var(--ds-color-border-muted);
+  --color-border-strong: var(--ds-color-border-strong);
+  --color-accent: var(--ds-color-accent-default);
+  --color-accent-hover: var(--ds-color-accent-hover);
+  --color-accent-active: var(--ds-color-accent-active);
+  --color-accent-emphasis: var(--ds-color-accent-emphasis);
+  --color-accent-muted: var(--ds-color-accent-muted);
+  --color-success-bg: var(--ds-color-status-success-bg);
+  --color-success: var(--ds-color-status-success-fg);
+  --color-success-border: var(--ds-color-status-success-border);
+  --color-warning-bg: var(--ds-color-status-warning-bg);
+  --color-warning: var(--ds-color-status-warning-fg);
+  --color-warning-border: var(--ds-color-status-warning-border);
+  --color-danger-bg: var(--ds-color-status-danger-bg);
+  --color-danger: var(--ds-color-status-danger-fg);
+  --color-danger-border: var(--ds-color-status-danger-border);
+  --color-info-bg: var(--ds-color-status-info-bg);
+  --color-info: var(--ds-color-status-info-fg);
+  --color-info-border: var(--ds-color-status-info-border);
+  --color-ai: var(--ds-color-ai-accent);
+  --color-ai-surface: var(--ds-color-ai-surface);
+  --color-ai-fg: var(--ds-color-ai-fg);
+  --radius-sm: var(--ds-dimension-radius-sm);
+  --radius-md: var(--ds-dimension-radius-md);
+  --radius-lg: var(--ds-dimension-radius-lg);
+  --radius-xl: var(--ds-dimension-radius-xl);
+  --radius-full: var(--ds-dimension-radius-full);
+  --shadow-elevation-1: var(--ds-shadow-elevation-1);
+  --shadow-elevation-2: var(--ds-shadow-elevation-2);
+  --shadow-elevation-3: var(--ds-shadow-elevation-3);
+  --shadow-elevation-4: var(--ds-shadow-elevation-4);
+  --shadow-elevation-5: var(--ds-shadow-elevation-5);
+  --font-sans: var(--ds-font-family-sans);
+  --font-mono: var(--ds-font-family-mono);
+}

@@ -1,0 +1,59 @@
+{
+  "color": {
+    "$type": "color",
+    "bg": {
+      "canvas": { "$value": "{color.white}", "$description": "页面最底层背景" },
+      "surface": { "$value": "{color.gray.50}", "$description": "卡片、面板等一级容器背景" },
+      "raised": { "$value": "{color.white}", "$description": "浮层：下拉、popover、模态" },
+      "sunken": { "$value": "{color.gray.100}", "$description": "内嵌区域：代码块底、输入框组、well" }
+    },
+    "fg": {
+      "default": { "$value": "{color.gray.900}", "$description": "正文与标题文字" },
+      "muted": { "$value": "{color.gray.600}", "$description": "次要文字：描述、时间戳" },
+      "subtle": { "$value": "{color.gray.400}", "$description": "三级文字：占位符、禁用。不用于关键信息" },
+      "on-accent": { "$value": "{color.white}", "$description": "accent 底色上的文字" }
+    },
+    "border": {
+      "default": { "$value": "{color.gray.200}", "$description": "默认描边与分隔线" },
+      "muted": { "$value": "{color.gray.100}", "$description": "弱分隔：同层内部划分" },
+      "strong": { "$value": "{color.gray.400}", "$description": "强调描边：输入框 hover、可拖拽边界" }
+    },
+    "accent": {
+      "default": {
+        "$value": "{color.blue.600}",
+        "$description": "品牌主强调色：主按钮、链接、选中态。大面积铺底改用 accent.muted"
+      },
+      "hover": { "$value": "{color.blue.700}", "$description": "accent.default 的 hover 态" },
+      "active": { "$value": "{color.blue.800}", "$description": "accent.default 的 active 态" },
+      "emphasis": { "$value": "{color.blue.700}", "$description": "浅底上的 accent 文字（对比度更高）" },
+      "muted": { "$value": "{color.blue.100}", "$description": "accent 的柔和底色：选中行、高亮块" }
+    },
+    "status": {
+      "success": {
+        "bg": { "$value": "{color.green.50}" },
+        "fg": { "$value": "{color.green.700}" },
+        "border": { "$value": "{color.green.200}" }
+      },
+      "warning": {
+        "bg": { "$value": "{color.amber.50}" },
+        "fg": { "$value": "{color.amber.700}" },
+        "border": { "$value": "{color.amber.200}" }
+      },
+      "danger": {
+        "bg": { "$value": "{color.red.50}" },
+        "fg": { "$value": "{color.red.600}" },
+        "border": { "$value": "{color.red.200}" }
+      },
+      "info": {
+        "bg": { "$value": "{color.blue.50}" },
+        "fg": { "$value": "{color.blue.600}" },
+        "border": { "$value": "{color.blue.200}" }
+      }
+    },
+    "ai": {
+      "accent": { "$value": "{color.violet.600}", "$description": "AI 身份色：AI 按钮、AI 图标。仅用于标识 AI 能力，不作普通装饰" },
+      "surface": { "$value": "{color.violet.50}", "$description": "AI 生成内容的底色：assistant 气泡、reasoning 面板" },
+      "fg": { "$value": "{color.violet.700}", "$description": "AI 相关文字与图标" }
+    }
+  }
+}

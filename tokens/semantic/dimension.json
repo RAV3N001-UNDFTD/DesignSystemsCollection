@@ -1,0 +1,10 @@
+{
+  "dimension": {
+    "$type": "dimension",
+    "space": {
+      "inline": { "$value": "{dimension.space.2}", "$description": "行内元素间距：图标与文字、tag 之间" },
+      "stack": { "$value": "{dimension.space.4}", "$description": "垂直堆叠节奏：表单项、卡片内段落之间" },
+      "section": { "$value": "{dimension.space.12}", "$description": "页面区块之间" }
+    }
+  }
+}

@@ -42,7 +42,7 @@ AI agents MUST follow this file when generating or modifying any UI code.
 |---|---|
 | `color.bg.canvas` / `.surface` / `.raised` | page ground / cards / overlays |
 | `color.fg.default` / `.muted` / `.subtle` | body text / secondary / tertiary |
-| `color.accent.default` (+ `.hover`) | primary actions, links, selection |
+| `color.accent.default` / `.hover` / `.active` | primary actions, links, selection |
 | `color.status.{success,warning,danger,info}.*` | feedback only — never decorative |
 | `color.ai.*` | AI-generated content attribution only |
 

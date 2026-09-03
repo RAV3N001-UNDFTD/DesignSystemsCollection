@@ -27,6 +27,6 @@
 
 - [x] 可行性评估与社区成熟做法调研 → [docs/01-feasibility-and-landscape.md](docs/01-feasibility-and-landscape.md)
 - [x] 方法论 v0：四层模型细则 + token 命名规范 + DESIGN.md / AGENTS.md 模板 → [methodology/](methodology/)
-- [ ] Token 基础层（DTCG JSON + Style Dictionary 管线）
+- [x] Token 基础层：DTCG 源 + Style Dictionary 管线 + default/dark 双主题 + 校验 CI → [tokens/](tokens/)
 - [ ] 第一套可套用设计系统（shadcn 兼容 registry）
 - [ ] 示例项目：个人作品集 / AI chat 应用

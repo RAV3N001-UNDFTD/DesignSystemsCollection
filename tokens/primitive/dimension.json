@@ -1,0 +1,38 @@
+{
+  "dimension": {
+    "$type": "dimension",
+    "space": {
+      "1": { "$value": "0.25rem", "$description": "4px" },
+      "2": { "$value": "0.5rem", "$description": "8px" },
+      "3": { "$value": "0.75rem", "$description": "12px" },
+      "4": { "$value": "1rem", "$description": "16px" },
+      "5": { "$value": "1.25rem", "$description": "20px" },
+      "6": { "$value": "1.5rem", "$description": "24px" },
+      "8": { "$value": "2rem", "$description": "32px" },
+      "10": { "$value": "2.5rem", "$description": "40px" },
+      "12": { "$value": "3rem", "$description": "48px" },
+      "16": { "$value": "4rem", "$description": "64px" }
+    },
+    "radius": {
+      "sm": { "$value": "0.25rem", "$description": "4px — 小控件：checkbox、tag" },
+      "md": { "$value": "0.5rem", "$description": "8px — 默认：按钮、输入框" },
+      "lg": { "$value": "0.75rem", "$description": "12px — 卡片" },
+      "xl": { "$value": "1rem", "$description": "16px — 大容器、模态" },
+      "full": { "$value": "9999px", "$description": "胶囊/圆形" }
+    },
+    "border-width": {
+      "1": { "$value": "1px" },
+      "2": { "$value": "2px" }
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "elevation": {
+      "1": { "$value": "0 1px 2px 0 rgb(0 0 0 / 0.05)", "$description": "贴面 — 输入框、静止卡片" },
+      "2": { "$value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)", "$description": "浮起 — hover 卡片" },
+      "3": { "$value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)", "$description": "下拉、popover" },
+      "4": { "$value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)", "$description": "模态" },
+      "5": { "$value": "0 25px 50px -12px rgb(0 0 0 / 0.25)", "$description": "最高层 — command palette" }
+    }
+  }
+}

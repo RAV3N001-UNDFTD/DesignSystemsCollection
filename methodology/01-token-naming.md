@@ -48,15 +48,17 @@ component:  {component}.{part?}.{property}.{variant?}.{state?}
 
 state 段（仅交互性 token 需要）：`hover` / `active` / `disabled` / `focus`。
 
+**状态变体的结构约束**：DTCG 规范不允许 token 内部嵌套 token，因此 state 不能挂在基础值下面——需要状态变体时，基础值显式命名为 `.default`，各状态作为**同级**节点（`accent.default` / `accent.hover` / `accent.active`）。
+
 示例：
 
 ```
-color.bg.surface            → {color.gray.50}
-color.fg.on-accent          → {color.gray.50}
-color.accent.default        → {color.blue.600}
-color.accent.default.hover  → {color.blue.700}
-color.status.danger.fg      → {color.red.600}
-color.ai.surface            → {color.violet.50}
+color.bg.surface       → {color.gray.50}
+color.fg.on-accent     → {color.gray.50}
+color.accent.default   → {color.blue.600}
+color.accent.hover     → {color.blue.700}
+color.status.danger.fg → {color.red.600}
+color.ai.surface       → {color.violet.50}
 ```
 
 ### 非颜色的 semantic
@@ -72,10 +74,12 @@ color.ai.surface            → {color.violet.50}
 **默认不建。** 只有当一个组件确需偏离语义层默认绑定时才创建，且值只能引用 semantic 层。
 
 ```
-button.primary.bg          → {color.accent.default}
-button.primary.bg.hover    → {color.accent.default.hover}
+button.primary.bg.default  → {color.accent.default}
+button.primary.bg.hover    → {color.accent.hover}
 chat-bubble.assistant.bg   → {color.ai.surface}
 ```
+
+（同样遵守状态结构约束：`bg` 需要状态变体时成为组，内含 `default` 与各状态。）
 
 判断标准：如果一个 component token 只是原样转发 semantic token（如 `card.bg → color.bg.surface`），删掉它，组件直接用 semantic。
 
