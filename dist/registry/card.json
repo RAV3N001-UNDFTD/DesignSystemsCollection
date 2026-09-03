@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card",
+  "type": "registry:ui",
+  "title": "Card",
+  "description": "Content container on bg-surface with header/content/footer slots. Never nest cards; hover elevation only for clickable cards.",
+  "files": [
+    {
+      "path": "registry/items/base/card/card.tsx",
+      "type": "registry:ui",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div\n      ref={ref}\n      className={cn(\n        \"rounded-lg border border-border bg-surface text-fg shadow-elevation-1\",\n        className\n      )}\n      {...props}\n    />\n  )\n)\nCard.displayName = \"Card\"\n\nconst CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div ref={ref} className={cn(\"flex flex-col gap-1 p-6\", className)} {...props} />\n  )\n)\nCardHeader.displayName = \"CardHeader\"\n\nconst CardTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(\n  ({ className, ...props }, ref) => (\n    <h3 ref={ref} className={cn(\"text-h4 font-medium text-fg\", className)} {...props} />\n  )\n)\nCardTitle.displayName = \"CardTitle\"\n\nconst CardDescription = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLParagraphElement>\n>(({ className, ...props }, ref) => (\n  <p ref={ref} className={cn(\"text-body-sm text-fg-muted\", className)} {...props} />\n))\nCardDescription.displayName = \"CardDescription\"\n\nconst CardContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div ref={ref} className={cn(\"p-6 pt-0 text-body\", className)} {...props} />\n  )\n)\nCardContent.displayName = \"CardContent\"\n\nconst CardFooter = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div ref={ref} className={cn(\"flex items-center gap-2 p-6 pt-0\", className)} {...props} />\n  )\n)\nCardFooter.displayName = \"CardFooter\"\n\nexport { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }\n"
+    },
+    {
+      "path": "registry/items/base/card/card.rules.md",
+      "type": "registry:file",
+      "target": "components/ui/card.rules.md",
+      "content": "# card — AI 使用规则\n\n## 何时用\n- 把一组相关内容封装为独立单元：列表中的条目、dashboard 模块、设置分区。\n\n## 何时不用\n- 页面唯一的主内容区 → 直接排在 canvas 上，不要\"为了包一层\"而用 Card（卡片套卡片是缺陷）。\n- 可点击整卡导航 → 外层用 `<a>` 包裹并加 `hover:shadow-elevation-2 transition-shadow`，不要给 Card 加 onClick。\n\n## 组合约束\n- 结构顺序固定：CardHeader（含 CardTitle/CardDescription）→ CardContent → CardFooter；跳过某段可以，乱序不行。\n- Card 底色是 `bg-surface`；卡内再分层用 `bg-sunken`，不要叠 `bg-surface`。\n- 阴影只允许 `shadow-elevation-1`（静止）/ `shadow-elevation-2`（hover），更高层级留给浮层组件。\n\n## 可访问性\n- CardTitle 渲染为 `h3`；若卡片处于不同标题层级的上下文，用语义正确的标题标签替换（保持样式类不变）。\n"
+    }
+  ]
+}

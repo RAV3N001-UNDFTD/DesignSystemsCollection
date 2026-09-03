@@ -8,7 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tokens:validate": "node scripts/validate-tokens.mjs",
     "tokens:build": "node scripts/build-tokens.mjs",
-    "build": "npm run tokens:validate && npm run tokens:build"
+    "build": "npm run tokens:validate && npm run tokens:build && npm run registry:validate && npm run typecheck && npm run registry:build",
+    "registry:validate": "node scripts/validate-registry.mjs",
+    "registry:build": "node scripts/build-registry.mjs",
+    "typecheck": "tsc -p tsconfig.registry.json"
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,11 @@
   },
   "homepage": "https://github.com/RAV3N001-UNDFTD/DesignSystemsCollection#readme",
   "devDependencies": {
-    "style-dictionary": "^5.5.2"
+    "@types/react": "^19.2.18",
+    "class-variance-authority": "^0.7.1",
+    "react": "^19.2.8",
+    "style-dictionary": "^5.5.2",
+    "typescript": "^7.0.2"
   },
   "type": "module",
   "private": "true"

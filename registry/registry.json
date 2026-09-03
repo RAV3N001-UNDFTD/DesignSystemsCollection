@@ -1,0 +1,122 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "design-systems-collection",
+  "homepage": "https://github.com/RAV3N001-UNDFTD/DesignSystemsCollection",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Action trigger. Variants: primary (one per view), secondary, ghost, destructive. Sizes sm/md/lg. Not for navigation — use links.",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        { "path": "registry/items/base/button/button.tsx", "type": "registry:ui" },
+        {
+          "path": "registry/items/base/button/button.rules.md",
+          "type": "registry:file",
+          "target": "components/ui/button.rules.md"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Content container on bg-surface with header/content/footer slots. Never nest cards; hover elevation only for clickable cards.",
+      "files": [
+        { "path": "registry/items/base/card/card.tsx", "type": "registry:ui" },
+        {
+          "path": "registry/items/base/card/card.rules.md",
+          "type": "registry:file",
+          "target": "components/ui/card.rules.md"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Single-line text input with built-in hover/focus/disabled/invalid states. Requires a paired label; aria-invalid drives the error style.",
+      "files": [
+        { "path": "registry/items/base/input/input.tsx", "type": "registry:ui" },
+        {
+          "path": "registry/items/base/input/input.rules.md",
+          "type": "registry:file",
+          "target": "components/ui/input.rules.md"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Static status/category label. Status variants map to real semantics only; the ai variant is the mandatory marker for AI-generated content.",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        { "path": "registry/items/base/badge/badge.tsx", "type": "registry:ui" },
+        {
+          "path": "registry/items/base/badge/badge.rules.md",
+          "type": "registry:file",
+          "target": "components/ui/badge.rules.md"
+        }
+      ]
+    },
+    {
+      "name": "page-header",
+      "type": "registry:ui",
+      "title": "Page Header",
+      "description": "Composed page title area: single h1, optional description, max two action buttons. One per page; not for cards or marketing heroes.",
+      "files": [
+        {
+          "path": "registry/items/composed/page-header/page-header.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/items/composed/page-header/page-header.rules.md",
+          "type": "registry:file",
+          "target": "components/ui/page-header.rules.md"
+        }
+      ]
+    },
+    {
+      "name": "portfolio-hero",
+      "type": "registry:block",
+      "title": "Portfolio Hero",
+      "description": "Text-led first screen for personal portfolio sites: tagline, h1 statement, intro, up to four link actions. Built-in vertical rhythm.",
+      "files": [
+        {
+          "path": "registry/items/blocks/portfolio-hero/portfolio-hero.tsx",
+          "type": "registry:component",
+          "target": "components/blocks/portfolio-hero.tsx"
+        },
+        {
+          "path": "registry/items/blocks/portfolio-hero/portfolio-hero.rules.md",
+          "type": "registry:file",
+          "target": "components/blocks/portfolio-hero.rules.md"
+        }
+      ]
+    },
+    {
+      "name": "project-grid",
+      "type": "registry:block",
+      "title": "Project Grid",
+      "description": "Data-driven project card grid for portfolios. Whole-card links, tag overflow folding, aiAssisted flag renders the ai badge.",
+      "registryDependencies": [
+        "https://raw.githubusercontent.com/RAV3N001-UNDFTD/DesignSystemsCollection/main/dist/registry/card.json",
+        "https://raw.githubusercontent.com/RAV3N001-UNDFTD/DesignSystemsCollection/main/dist/registry/badge.json"
+      ],
+      "files": [
+        {
+          "path": "registry/items/blocks/project-grid/project-grid.tsx",
+          "type": "registry:component",
+          "target": "components/blocks/project-grid.tsx"
+        },
+        {
+          "path": "registry/items/blocks/project-grid/project-grid.rules.md",
+          "type": "registry:file",
+          "target": "components/blocks/project-grid.rules.md"
+        }
+      ]
+    }
+  ]
+}

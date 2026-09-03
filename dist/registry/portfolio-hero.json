@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-hero",
+  "type": "registry:block",
+  "title": "Portfolio Hero",
+  "description": "Text-led first screen for personal portfolio sites: tagline, h1 statement, intro, up to four link actions. Built-in vertical rhythm.",
+  "files": [
+    {
+      "path": "registry/items/blocks/portfolio-hero/portfolio-hero.tsx",
+      "type": "registry:component",
+      "target": "components/blocks/portfolio-hero.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ninterface PortfolioHeroProps extends React.HTMLAttributes<HTMLElement> {\n  name: string\n  tagline: string\n  intro?: string\n  /** 社交/联系链接区：放 2–4 个链接或按钮 */\n  links?: React.ReactNode\n}\n\nfunction PortfolioHero({ name, tagline, intro, links, className, ...props }: PortfolioHeroProps) {\n  return (\n    <section\n      className={cn(\"flex flex-col items-start gap-6 py-16 sm:py-24\", className)}\n      {...props}\n    >\n      <div className=\"flex flex-col gap-3\">\n        <p className=\"text-body-sm font-medium uppercase tracking-widest text-accent-emphasis\">\n          {tagline}\n        </p>\n        <h1 className=\"max-w-3xl text-h1 font-bold text-fg sm:text-balance\">{name}</h1>\n        {intro ? <p className=\"max-w-prose text-body text-fg-muted\">{intro}</p> : null}\n      </div>\n      {links ? <div className=\"flex flex-wrap items-center gap-3\">{links}</div> : null}\n    </section>\n  )\n}\n\nexport { PortfolioHero }\n"
+    },
+    {
+      "path": "registry/items/blocks/portfolio-hero/portfolio-hero.rules.md",
+      "type": "registry:file",
+      "target": "components/blocks/portfolio-hero.rules.md",
+      "content": "# portfolio-hero — AI 使用规则\n\n## 何时用\n- 个人作品集/个人网站首屏。`name` 放人名或一句身份陈述，`tagline` 放角色/领域短语。\n\n## 何时不用\n- 应用内页面顶部 → 用 `page-header`。\n- 产品营销页 hero（需要配图/截图/CTA 组）→ 另建营销 hero block，本组件是文字主导的克制版式。\n\n## 组合约束\n- `links` 用 Button（secondary/ghost）或带 `text-accent` 的链接，最多 4 个；第一个可以是 primary Button（如 \"Get in touch\"）。\n- 上下留白已内置（`py-16/24`），外层不要再包一层带大 padding 的容器。\n- 不要在 hero 里塞第二个标题层级；下一个区块从 `h2` 开始。\n\n## 可访问性\n- `name` 渲染为页面唯一 `h1`。\n- `tagline` 是装饰性 uppercase 文本，若含关键信息（如\"可接受远程工作\"），同时在正文 intro 中出现。\n"
+    }
+  ]
+}

@@ -38,6 +38,18 @@ function tailwindColorName(path) {
   }
 }
 
+/** 语义排版组名 → Tailwind text-* 工具类名（text-h1、text-body-sm...） */
+const TEXT_STYLE_NAMES = {
+  'heading.1': 'h1',
+  'heading.2': 'h2',
+  'heading.3': 'h3',
+  'heading.4': 'h4',
+  'body.default': 'body',
+  'body.small': 'body-sm',
+  caption: 'caption',
+  code: 'code',
+};
+
 StyleDictionary.registerFormat({
   name: 'tailwind/theme',
   format: ({ dictionary }) => {
@@ -48,8 +60,17 @@ StyleDictionary.registerFormat({
         lines.push(`  --color-${tailwindColorName(token.path)}: ${dsVar};`);
       } else if (token.path[0] === 'dimension' && token.path[1] === 'radius') {
         lines.push(`  --radius-${token.path[2]}: ${dsVar};`);
+      } else if (token.path[0] === 'dimension' && token.path[1] === 'space' && token.path[2] === '1') {
+        // Tailwind v4 的 spacing 标尺基数与 dimension.space.1 对齐，
+        // 使 p-3 / h-8 等标准 spacing 工具类天然等于 token 阶梯的值。
+        lines.push(`  --spacing: ${dsVar};`);
       } else if (token.path[0] === 'font' && token.path[1] === 'family') {
         lines.push(`  --font-${token.path[2]}: ${dsVar};`);
+      } else if (token.path[0] === 'font' && token.filePath.includes('semantic')) {
+        const styleName = TEXT_STYLE_NAMES[token.path.slice(1, -1).join('.')];
+        const prop = token.path.at(-1);
+        if (styleName && prop === 'size') lines.push(`  --text-${styleName}: ${dsVar};`);
+        if (styleName && prop === 'line-height') lines.push(`  --text-${styleName}--line-height: ${dsVar};`);
       } else if (token.path[0] === 'shadow' && token.path[1] === 'elevation') {
         lines.push(`  --shadow-elevation-${token.path[2]}: ${dsVar};`);
       }

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "type": "registry:ui",
+  "title": "Badge",
+  "description": "Static status/category label. Status variants map to real semantics only; the ai variant is the mandatory marker for AI-generated content.",
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "files": [
+    {
+      "path": "registry/items/base/badge/badge.tsx",
+      "type": "registry:ui",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst badgeVariants = cva(\n  \"inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-caption font-medium\",\n  {\n    variants: {\n      variant: {\n        neutral: \"border-border bg-surface text-fg-muted\",\n        accent: \"border-transparent bg-accent-muted text-accent-emphasis\",\n        success: \"border-success-border bg-success-bg text-success\",\n        warning: \"border-warning-border bg-warning-bg text-warning\",\n        danger: \"border-danger-border bg-danger-bg text-danger\",\n        info: \"border-info-border bg-info-bg text-info\",\n        ai: \"border-transparent bg-ai-surface text-ai-fg\",\n      },\n    },\n    defaultVariants: {\n      variant: \"neutral\",\n    },\n  }\n)\n\nexport interface BadgeProps\n  extends React.HTMLAttributes<HTMLSpanElement>,\n    VariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n  return <span className={cn(badgeVariants({ variant }), className)} {...props} />\n}\n\nexport { Badge, badgeVariants }\n"
+    },
+    {
+      "path": "registry/items/base/badge/badge.rules.md",
+      "type": "registry:file",
+      "target": "components/ui/badge.rules.md",
+      "content": "# badge — AI 使用规则\n\n## 何时用\n- 展示状态、类别或元信息：发布状态、技术栈 tag、计数。\n- `ai` variant 专用于标识 AI 生成/AI 驱动的内容（对应 `color.ai.*` 语义），这是 AI-native 项目的强制约定：凡 AI 产出内容旁的标识一律用它。\n\n## 何时不用\n- 可点击的过滤/选择 → 用 toggle/chip 类交互组件（待收录），badge 是纯展示。\n- 表达操作结果的即时反馈 → 用 toast/alert，badge 是持续状态。\n\n## 组合约束\n- status 四色（success/warning/danger/info）只用于真实状态语义，禁止当装饰色挑颜色用。\n- `ai` variant 不得用于非 AI 内容（会稀释 AI 标识的可信度）。\n- 一个条目上的 badge 不超过 3 个，多了改为 \"+N\" 折叠。\n\n## 可访问性\n- badge 的含义不能只靠颜色传达——文字本身必须可独立理解（\"Failed\" 而不是只有红点）。\n"
+    }
+  ]
+}

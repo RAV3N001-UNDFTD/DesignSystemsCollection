@@ -1,10 +1,24 @@
-name: tokens
+name: ci
 
 on:
   push:
-    paths: ['tokens/**', 'scripts/**', 'dist/**', 'package*.json', '.github/workflows/tokens.yml']
+    paths:
+      - 'tokens/**'
+      - 'registry/**'
+      - 'scripts/**'
+      - 'dist/**'
+      - 'package*.json'
+      - 'tsconfig*.json'
+      - '.github/workflows/tokens.yml'
   pull_request:
-    paths: ['tokens/**', 'scripts/**', 'dist/**', 'package*.json', '.github/workflows/tokens.yml']
+    paths:
+      - 'tokens/**'
+      - 'registry/**'
+      - 'scripts/**'
+      - 'dist/**'
+      - 'package*.json'
+      - 'tsconfig*.json'
+      - '.github/workflows/tokens.yml'
 
 jobs:
   validate-and-build:
@@ -16,7 +30,6 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run tokens:validate
-      - run: npm run tokens:build
+      - run: npm run build
       - name: Ensure committed dist is in sync with sources
         run: git diff --exit-code dist

@@ -32,6 +32,7 @@
   --color-ai: var(--ds-color-ai-accent);
   --color-ai-surface: var(--ds-color-ai-surface);
   --color-ai-fg: var(--ds-color-ai-fg);
+  --spacing: var(--ds-dimension-space-1);
   --radius-sm: var(--ds-dimension-radius-sm);
   --radius-md: var(--ds-dimension-radius-md);
   --radius-lg: var(--ds-dimension-radius-lg);
@@ -44,4 +45,19 @@
   --shadow-elevation-5: var(--ds-shadow-elevation-5);
   --font-sans: var(--ds-font-family-sans);
   --font-mono: var(--ds-font-family-mono);
+  --text-h1: var(--ds-font-heading-1-size);
+  --text-h1--line-height: var(--ds-font-heading-1-line-height);
+  --text-h2: var(--ds-font-heading-2-size);
+  --text-h2--line-height: var(--ds-font-heading-2-line-height);
+  --text-h3: var(--ds-font-heading-3-size);
+  --text-h3--line-height: var(--ds-font-heading-3-line-height);
+  --text-h4: var(--ds-font-heading-4-size);
+  --text-h4--line-height: var(--ds-font-heading-4-line-height);
+  --text-body: var(--ds-font-body-default-size);
+  --text-body--line-height: var(--ds-font-body-default-line-height);
+  --text-body-sm: var(--ds-font-body-small-size);
+  --text-body-sm--line-height: var(--ds-font-body-small-line-height);
+  --text-caption: var(--ds-font-caption-size);
+  --text-caption--line-height: var(--ds-font-caption-line-height);
+  --text-code: var(--ds-font-code-size);
 }

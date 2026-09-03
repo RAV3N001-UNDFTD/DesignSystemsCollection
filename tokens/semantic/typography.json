@@ -34,6 +34,11 @@
         "line-height": { "$type": "number", "$value": "{font.line-height.300}" }
       }
     },
+    "caption": {
+      "size": { "$type": "dimension", "$value": "{font.size.100}" },
+      "weight": { "$type": "fontWeight", "$value": "{font.weight.regular}" },
+      "line-height": { "$type": "number", "$value": "{font.line-height.200}" }
+    },
     "code": {
       "size": { "$type": "dimension", "$value": "{font.size.200}" },
       "family": { "$type": "fontFamily", "$value": "{font.family.mono}" }

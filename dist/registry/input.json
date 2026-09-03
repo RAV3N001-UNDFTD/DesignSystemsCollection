@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "type": "registry:ui",
+  "title": "Input",
+  "description": "Single-line text input with built-in hover/focus/disabled/invalid states. Requires a paired label; aria-invalid drives the error style.",
+  "files": [
+    {
+      "path": "registry/items/base/input/input.tsx",
+      "type": "registry:ui",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(\n  ({ className, type, ...props }, ref) => (\n    <input\n      ref={ref}\n      type={type}\n      className={cn(\n        \"flex h-9 w-full rounded-md border border-border bg-canvas px-3 py-1 text-body-sm text-fg transition-colors duration-150\",\n        \"placeholder:text-fg-subtle\",\n        \"hover:border-border-strong\",\n        \"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-transparent\",\n        \"disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-50\",\n        \"aria-[invalid=true]:border-danger-border aria-[invalid=true]:ring-danger\",\n        className\n      )}\n      {...props}\n    />\n  )\n)\nInput.displayName = \"Input\"\n\nexport { Input }\n"
+    },
+    {
+      "path": "registry/items/base/input/input.rules.md",
+      "type": "registry:file",
+      "target": "components/ui/input.rules.md",
+      "content": "# input — AI 使用规则\n\n## 何时用\n- 单行文本/数字/邮箱等输入。多行用 textarea（待收录），选择用 select/combobox（待收录）。\n\n## 何时不用\n- 搜索触发整页跳转 → 用表单包裹并提供提交按钮，不要只靠 onChange。\n- 展示只读值 → 用文本排版，不要用 disabled input 冒充。\n\n## 组合约束\n- 必须与 `<label>` 成对出现（显式 `htmlFor`），占位符不能替代 label。\n- 校验错误：设置 `aria-invalid={true}`（错误态样式已内置），错误文案用 `text-body-sm text-danger` 放在输入框下方并用 `aria-describedby` 关联。\n- 不要通过 `className` 改高度做\"大号输入框\"；需要尺寸变体时提议给组件加 size prop。\n\n## 可访问性\n- `aria-invalid` + `aria-describedby` 是错误态的强制要求。\n- 禁用态要说明原因（tooltip 或帮助文案），不要静默禁用。\n"
+    }
+  ]
+}

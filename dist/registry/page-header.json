@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-header",
+  "type": "registry:ui",
+  "title": "Page Header",
+  "description": "Composed page title area: single h1, optional description, max two action buttons. One per page; not for cards or marketing heroes.",
+  "files": [
+    {
+      "path": "registry/items/composed/page-header/page-header.tsx",
+      "type": "registry:ui",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ninterface PageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {\n  title: string\n  description?: string\n  /** 右侧动作区：放 1–2 个 Button */\n  actions?: React.ReactNode\n}\n\nfunction PageHeader({ title, description, actions, className, ...props }: PageHeaderProps) {\n  return (\n    <div\n      className={cn(\n        \"flex flex-col gap-4 border-b border-border pb-6 sm:flex-row sm:items-end sm:justify-between\",\n        className\n      )}\n      {...props}\n    >\n      <div className=\"flex flex-col gap-1\">\n        <h1 className=\"text-h2 font-semibold text-fg\">{title}</h1>\n        {description ? <p className=\"max-w-prose text-body text-fg-muted\">{description}</p> : null}\n      </div>\n      {actions ? <div className=\"flex shrink-0 items-center gap-2\">{actions}</div> : null}\n    </div>\n  )\n}\n\nexport { PageHeader }\n"
+    },
+    {
+      "path": "registry/items/composed/page-header/page-header.rules.md",
+      "type": "registry:file",
+      "target": "components/ui/page-header.rules.md",
+      "content": "# page-header — AI 使用规则\n\n## 何时用\n- 每个页面/主视图顶部的标准标题区。一个页面只有一个。\n\n## 何时不用\n- 卡片或分区的标题 → 用 CardHeader 或 `text-h3/h4` 排版，不要嵌套 PageHeader。\n- 营销落地页的 hero → 用 `portfolio-hero` 之类的 block，PageHeader 是应用型页面的克制版式。\n\n## 组合约束\n- `actions` 最多 2 个按钮：1 个 primary + 至多 1 个 secondary/ghost；更多操作收进菜单。\n- `title` 是页面唯一的 `h1`；页内其余标题从 `h2` 开始。\n- 与下方内容的间距用 `space-section` 节奏（外层容器加 `mt-12` 级别间距），不要在 PageHeader 内部加 margin-bottom。\n\n## 可访问性\n- `description` 是对页面的补充说明，不要把关键操作说明只放在这里。\n"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "project-grid",
+  "type": "registry:block",
+  "title": "Project Grid",
+  "description": "Data-driven project card grid for portfolios. Whole-card links, tag overflow folding, aiAssisted flag renders the ai badge.",
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/RAV3N001-UNDFTD/DesignSystemsCollection/main/dist/registry/card.json",
+    "https://raw.githubusercontent.com/RAV3N001-UNDFTD/DesignSystemsCollection/main/dist/registry/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/items/blocks/project-grid/project-grid.tsx",
+      "type": "registry:component",
+      "target": "components/blocks/project-grid.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Badge } from \"@/components/ui/badge\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\ninterface Project {\n  title: string\n  description: string\n  href: string\n  /** 技术栈/类别标签，最多 3 个会被展示 */\n  tags?: string[]\n  /** 标记 AI 参与构建的项目，会显示 ai badge */\n  aiAssisted?: boolean\n}\n\ninterface ProjectGridProps extends React.HTMLAttributes<HTMLDivElement> {\n  projects: Project[]\n}\n\nfunction ProjectGrid({ projects, className, ...props }: ProjectGridProps) {\n  return (\n    <div className={cn(\"grid gap-6 sm:grid-cols-2 lg:grid-cols-3\", className)} {...props}>\n      {projects.map((project) => (\n        <a\n          key={project.href}\n          href={project.href}\n          className=\"group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas\"\n        >\n          <Card className=\"h-full transition-shadow duration-150 group-hover:shadow-elevation-2\">\n            <CardHeader>\n              <CardTitle className=\"group-hover:text-accent-emphasis\">{project.title}</CardTitle>\n              <CardDescription>{project.description}</CardDescription>\n            </CardHeader>\n            {project.tags?.length || project.aiAssisted ? (\n              <CardContent className=\"flex flex-wrap items-center gap-2\">\n                {project.aiAssisted ? <Badge variant=\"ai\">AI assisted</Badge> : null}\n                {project.tags?.slice(0, 3).map((tag) => (\n                  <Badge key={tag}>{tag}</Badge>\n                ))}\n                {(project.tags?.length ?? 0) > 3 ? (\n                  <Badge>+{(project.tags?.length ?? 0) - 3}</Badge>\n                ) : null}\n              </CardContent>\n            ) : null}\n          </Card>\n        </a>\n      ))}\n    </div>\n  )\n}\n\nexport { ProjectGrid, type Project }\n"
+    },
+    {
+      "path": "registry/items/blocks/project-grid/project-grid.rules.md",
+      "type": "registry:file",
+      "target": "components/blocks/project-grid.rules.md",
+      "content": "# project-grid — AI 使用规则\n\n## 何时用\n- 作品集/项目列表页的项目卡片栅格。数据驱动（传 `projects` 数组），不要手写重复卡片。\n\n## 何时不用\n- 少于 3 个项目 → 用纵向堆叠的大卡片（信息更充分），栅格会显得空。\n- 需要筛选/排序/分页的大型列表 → 这是展示型 block，列表管理另建数据表格模式。\n\n## 组合约束\n- 每个项目 tags 超过 3 个自动折叠为 \"+N\"（已内置），不要通过 className 放开。\n- `aiAssisted` 是 ai badge 的唯一入口——不要在 tags 里手写 \"AI\" 标签冒充。\n- 整卡可点（外层 `<a>`），卡内不要再嵌套链接或按钮。\n\n## 可访问性\n- 卡片链接的可访问名来自卡内标题文本，`href` 必须是真实可导航地址。\n- hover 效果（阴影+标题变色）不是唯一的可交互提示：焦点态 ring 已内置，禁止移除。\n"
+    }
+  ]
+}

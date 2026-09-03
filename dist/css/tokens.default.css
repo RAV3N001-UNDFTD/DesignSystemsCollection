@@ -171,6 +171,9 @@
   --ds-font-body-small-size: var(--ds-font-size-200);
   --ds-font-body-small-weight: var(--ds-font-weight-regular);
   --ds-font-body-small-line-height: var(--ds-font-line-height-300);
+  --ds-font-caption-size: var(--ds-font-size-100);
+  --ds-font-caption-weight: var(--ds-font-weight-regular);
+  --ds-font-caption-line-height: var(--ds-font-line-height-200);
   --ds-font-code-size: var(--ds-font-size-200);
   --ds-font-code-family: var(--ds-font-family-mono);
 }
