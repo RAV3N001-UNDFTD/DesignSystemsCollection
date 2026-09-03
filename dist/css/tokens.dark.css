@@ -31,7 +31,7 @@
   --ds-color-status-info-bg: var(--ds-color-blue-950);
   --ds-color-status-info-fg: var(--ds-color-blue-400);
   --ds-color-status-info-border: var(--ds-color-blue-900);
-  --ds-color-ai-accent: var(--ds-color-violet-400); /** AI 身份色：AI 按钮、AI 图标。仅用于标识 AI 能力，不作普通装饰 */
-  --ds-color-ai-surface: var(--ds-color-violet-950); /** AI 生成内容的底色：assistant 气泡、reasoning 面板 */
-  --ds-color-ai-fg: var(--ds-color-violet-300); /** AI 相关文字与图标 */
+  --ds-color-ai-accent: var(--ds-color-violet-400); /** AI 功能强调色：AI 按钮、sparkle 图标。仅用于标识 AI 能力入口，不作普通装饰；颜色不得是 AI 标识的唯一手段（需配文字/图标） */
+  --ds-color-ai-surface: var(--ds-color-violet-950); /** AI 功能区底色：reasoning 面板、AI 建议卡。注意 assistant 消息主流做法是无底色全宽文本，不要默认套用 */
+  --ds-color-ai-fg: var(--ds-color-violet-300); /** AI 相关文字与图标（ai.surface 上的前景） */
 }

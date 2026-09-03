@@ -1,7 +1,10 @@
 # portfolio-hero — AI 使用规则
 
 ## 何时用
-- 个人作品集/个人网站首屏。`name` 放人名或一句身份陈述，`tagline` 放角色/领域短语。
+- 个人作品集/个人网站首屏。两种主流内容策略（Mobbin 调研验证），选其一：
+  - **姓名主导**：`name` 放人名（视觉记忆点是名字），`tagline` 放角色/领域短语；
+  - **陈述主导**：`name` 放一句身份/价值陈述（如 "I design systems that models can build with"），`tagline` 放姓名+角色。
+- 判断标准：个人品牌已有知名度用姓名主导；靠观点/定位打动访客用陈述主导。
 
 ## 何时不用
 - 应用内页面顶部 → 用 `page-header`。

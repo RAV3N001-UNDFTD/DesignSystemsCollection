@@ -14,6 +14,10 @@ interface Project {
   title: string
   description: string
   href: string
+  /** 项目封面图（建议 16:10）。调研结论：作品集栅格以图片为第一信息层，尽量提供 */
+  imageUrl?: string
+  /** 封面图替代文本；提供 imageUrl 时必填有意义的描述 */
+  imageAlt?: string
   /** 技术栈/类别标签，最多 3 个会被展示 */
   tags?: string[]
   /** 标记 AI 参与构建的项目，会显示 ai badge */
@@ -33,7 +37,15 @@ function ProjectGrid({ projects, className, ...props }: ProjectGridProps) {
           href={project.href}
           className="group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
         >
-          <Card className="h-full transition-shadow duration-150 group-hover:shadow-elevation-2">
+          <Card className="h-full overflow-hidden transition-shadow duration-150 group-hover:shadow-elevation-2">
+            {project.imageUrl ? (
+              <img
+                src={project.imageUrl}
+                alt={project.imageAlt ?? ""}
+                loading="lazy"
+                className="aspect-[16/10] w-full border-b border-border-muted bg-sunken object-cover"
+              />
+            ) : null}
             <CardHeader>
               <CardTitle className="group-hover:text-accent-emphasis">{project.title}</CardTitle>
               <CardDescription>{project.description}</CardDescription>

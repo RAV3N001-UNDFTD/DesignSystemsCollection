@@ -107,17 +107,22 @@ registry/
 
 沉淀 AI 产品特有的交互模式。只有 AI 应用形态的项目需要装这一层；它在 registry 中就是一组前缀为 `ai/` 的 items，机制与 L2 完全相同。
 
-### 模式清单（v0 范围）
+### 模式清单（v0 范围，规格细节经 2026-09 Mobbin 调研校准，见 [docs/03](../docs/03-mobbin-research-findings.md)）
 
-| 模式 | 说明 | 首选基础 |
+| 模式 | 说明与规格要点 | 首选基础 |
 |---|---|---|
-| conversation | 消息流、气泡、多轮上下文展示 | AI Elements / assistant-ui |
+| conversation | 消息流。主流结构：assistant 消息**全宽无气泡**直接排在画布上，user 消息右对齐浅色气泡 | AI Elements / assistant-ui |
 | streaming | 流式文本、打字指示、骨架与占位策略 | AI Elements |
-| tool-call | 工具调用的进行中/成功/失败/需授权四态展示 | AI Elements |
-| reasoning | 可折叠的思考过程面板 | AI Elements |
+| tool-call | **折叠状态行**：状态图标 + 工具名 + 简述 + chevron，展开见入参/结果；进行中带 spinner/计时，覆盖 进行中/成功/失败/需授权 四态 | AI Elements |
+| reasoning | 答案上方弱化的折叠开关，标签带时长（"Thought for Ns"），展开内容用 `fg.muted` | AI Elements |
 | generative-ui | 生成式 UI 的**组件词汇表**：声明允许 LLM 通过 tool call 渲染的组件集合及其 props schema | 自建约定 |
-| uncertainty | 置信度、来源引用、"AI 可能出错"的表达 | 自建 |
-| human-in-the-loop | 确认/编辑/拒绝 AI 建议的标准控件 | 自建 |
+| uncertainty | 两个子件：行内 **citation-chip**（favicon/编号，可 "+N" 截断）+ 可展开 **sources-panel**；配合固定位置的 AI 免责声明文字（"AI can make mistakes" 类） | 自建 |
+| human-in-the-loop | **三动作组**：accept=primary / dismiss=ghost / retry-refine 第三动作；覆盖已有内容的替换必须二次确认 | 自建 |
+| response-actions | assistant 消息底部操作行：复制 / 👍👎 反馈（点踩可追问原因）/ 重新生成 | AI Elements |
+| ai-empty-state | 首次进入的问候语 + 大输入框 + 建议 prompt/action chips | 自建 |
+| usage-meter | 额度/配额展示 + 升级入口（侧栏底部或顶栏徽章） | 自建 |
+
+补充惯例：模型/模式选择器主流位置在**输入框（composer）内部**，作为 conversation 的组成部分处理，暂不单列。
 
 ### 规则
 

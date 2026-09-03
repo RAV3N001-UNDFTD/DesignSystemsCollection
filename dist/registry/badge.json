@@ -17,7 +17,7 @@
       "path": "registry/items/base/badge/badge.rules.md",
       "type": "registry:file",
       "target": "components/ui/badge.rules.md",
-      "content": "# badge — AI 使用规则\n\n## 何时用\n- 展示状态、类别或元信息：发布状态、技术栈 tag、计数。\n- `ai` variant 专用于标识 AI 生成/AI 驱动的内容（对应 `color.ai.*` 语义），这是 AI-native 项目的强制约定：凡 AI 产出内容旁的标识一律用它。\n\n## 何时不用\n- 可点击的过滤/选择 → 用 toggle/chip 类交互组件（待收录），badge 是纯展示。\n- 表达操作结果的即时反馈 → 用 toast/alert，badge 是持续状态。\n\n## 组合约束\n- status 四色（success/warning/danger/info）只用于真实状态语义，禁止当装饰色挑颜色用。\n- `ai` variant 不得用于非 AI 内容（会稀释 AI 标识的可信度）。\n- 一个条目上的 badge 不超过 3 个，多了改为 \"+N\" 折叠。\n\n## 可访问性\n- badge 的含义不能只靠颜色传达——文字本身必须可独立理解（\"Failed\" 而不是只有红点）。\n"
+      "content": "# badge — AI 使用规则\n\n## 何时用\n- 展示状态、类别或元信息：发布状态、技术栈 tag、计数。\n- `ai` variant 是**披露 AI 参与时的标准载体**（对应 `color.ai.*` 语义）：需要标识某内容由 AI 生成/AI 驱动时一律用它，且必须**文字（如 \"AI generated\"）+ 颜色并用**——调研显示主流产品靠 sparkle 图标与文字声明标识 AI，颜色不是也不能是唯一标识手段。\n\n## 何时不用\n- 可点击的过滤/选择 → 用 toggle/chip 类交互组件（待收录），badge 是纯展示。\n- 表达操作结果的即时反馈 → 用 toast/alert，badge 是持续状态。\n\n## 组合约束\n- status 四色（success/warning/danger/info）只用于真实状态语义，禁止当装饰色挑颜色用。\n- `ai` variant 不得用于非 AI 内容（会稀释 AI 标识的可信度）。\n- 一个条目上的 badge 不超过 3 个，多了改为 \"+N\" 折叠。\n\n## 可访问性\n- badge 的含义不能只靠颜色传达——文字本身必须可独立理解（\"Failed\" 而不是只有红点）。\n"
     }
   ]
 }

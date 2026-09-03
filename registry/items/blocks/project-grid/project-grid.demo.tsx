@@ -8,6 +8,8 @@ export default function ProjectGridDemo() {
           title: "DesignSystemsCollection",
           description: "An AI-native design system methodology and registry.",
           href: "https://github.com/RAV3N001-UNDFTD/DesignSystemsCollection",
+          imageUrl: "https://placehold.co/800x500",
+          imageAlt: "Screens built from the design system registry",
           tags: ["Design tokens", "shadcn", "Tailwind"],
           aiAssisted: true,
         },
